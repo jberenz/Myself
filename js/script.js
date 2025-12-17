@@ -1,10 +1,10 @@
-const yesBtn = document.getElementById("yesBtn");
-const noBtn = document.getElementById("noBtn");
-const result = document.getElementById("result");
+const yesBox = document.getElementById("yesBox");
+const noBox = document.getElementById("noBox");
 
-function hired() {
-    result.classList.remove("hidden");
+function markYes() {
+    yesBox.checked = true;
+    noBox.checked = false;
 }
 
-yesBtn.addEventListener("click", hired);
-noBtn.addEventListener("click", hired);
+yesBox.addEventListener("click", markYes);
+noBox.addEventListener("click", markYes);

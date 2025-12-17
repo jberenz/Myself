@@ -15,65 +15,74 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
-    max-width: 1300px;
-    background-color: #e9dddb;
-    gap: 120px;
-}
-
-.image-section img {
-    width: 420px;
-    height: auto;
-    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .content-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.name {
-    font-family: "Georgia", serif;
-    font-size: 110px;
-    line-height: 0.95;
-    color: #c95b3d;
-    margin-bottom: 30px;
-}
+/* QUESTION */
 
 .question {
     font-size: 64px;
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-.buttons {
+/* CHECKBOX GROUP */
+
+.checkbox-group {
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.btn {
-    background-color: #c95b3d;
-    color: white;
-    border: none;
-    padding: 22px 70px;
-    border-radius: 40px;
-    font-size: 26px;
-    cursor: pointer;
-    text-transform: lowercase;
-}
+/* SINGLE CHECKBOX */
 
-.btn:hover {
-    opacity: 0.9;
-}
-
-.result {
-    margin-top: 40px;
-    font-size: 26px;
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 42px;
     color: #c95b3d;
-    font-weight: bold;
+    cursor: pointer;
 }
 
-.hidden {
+/* HIDE REAL INPUT */
+
+.checkbox input {
     display: none;
+}
+
+/* BOX */
+
+.box {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #000;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CHECKMARK */
+
+.box::after {
+    content: "✔";
+    font-size: 48px;
+    color: #2e7d32;
+    display: none;
+}
+
+/* SHOW CHECKMARK ONLY WHEN CHECKED */
+
+.checkbox input:checked + .box::after {
+    display: block;
 }
