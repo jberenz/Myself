@@ -1,70 +1,76 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    margin: 0;
     height: 100vh;
-    background: #1e1e1e;
+    background-color: #e9dddb;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.card {
-    background: #2b2b2b;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    width: 320px;
-    color: #ffffff;
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    background-color: #e9dddb;
+    gap: 120px;
 }
 
-.profile-pic {
-    width: 140px;
-    height: 140px;
+.image-section img {
+    width: 420px;
+    height: auto;
     object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
 }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-family: "Georgia", serif;
+    font-size: 110px;
+    line-height: 0.95;
+    color: #c95b3d;
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 64px;
+    color: #ffffff;
+    margin-bottom: 50px;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 60px;
 }
 
-button {
-    flex: 1;
-    padding: 10px;
+.btn {
+    background-color: #c95b3d;
+    color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 22px 70px;
+    border-radius: 40px;
+    font-size: 26px;
     cursor: pointer;
+    text-transform: lowercase;
 }
 
-#yesBtn {
-    background-color: #4CAF50;
-    color: white;
+.btn:hover {
+    opacity: 0.9;
 }
 
-#noBtn {
-    background-color: #f44336;
-    color: white;
-}
-
-button:hover {
-    opacity: 0.85;
-}
-
-#result {
-    margin-top: 20px;
+.result {
+    margin-top: 40px;
+    font-size: 26px;
+    color: #c95b3d;
     font-weight: bold;
 }
 
